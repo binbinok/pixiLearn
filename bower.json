@@ -1,0 +1,20 @@
+{
+  "name": "pixiLearn",
+  "homepage": "https://github.com/binbinok/pixiLearn",
+  "authors": [
+    "tangbinbin <tangbinbin@hetao101.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pixi": "^4.8.3"
+  }
+}

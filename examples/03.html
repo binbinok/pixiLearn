@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body{margin: 0; padding: 0}
+    </style>
+</head>
+<body>
+    <script src="../pixi/pixi.min.js"></script>
+    <script>
+        let winWidth = window.innerWidth;
+        let winHeight = window.innerHeight;
+        let app = new PIXI.Application({
+            width: winWidth,
+            height: winHeight,
+            antialiasing: true, 
+            transparent: false, 
+            resolution: 1
+        });
+
+        document.body.appendChild(app.view);
+
+        PIXI.loader
+            .add("https://images-na.ssl-images-amazon.com/images/I/41Xe%2B6VIgtL.jpg")
+            .load(setup);
+
+        function setup() {
+            let cat = new PIXI.Sprite(PIXI.loader.resources["https://images-na.ssl-images-amazon.com/images/I/41Xe%2B6VIgtL.jpg"].texture);
+            cat.width = 50;
+            cat.height = 50;
+            cat.x = 100;
+            cat.y = 100;
+            app.stage.addChild(cat);
+        }
+    </script>
+</body>
+</html>

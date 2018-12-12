@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>displaying the canvas</title>
+</head>
+<body>
+    <script src="../pixi/pixi.min.js"></script>
+    <script>
+        let app = new PIXI.Application({
+            width: 256,
+            height: 256,
+            antialiasing: true,
+            transparent: false,
+            resolution: 1
+        });
+        document.body.appendChild(app.view);
+        
+        app.renderer.view.border = '1px dashed black';
+
+        app.renderer.resize(512, 512);
+
+        app.renderer.backgroundColor = 0x061639
+    </script>
+</body>
+</html>

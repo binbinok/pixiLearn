@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../pixi/pixi.min.js"></script>
+    <script>
+        const
+            width = window.innerWidth,
+            height = window.innerHeight,
+            imgBaseUrl = '10.200.12.14:3000';
+        let Application = PIXI.Application,
+            loader = PIXI.loader,
+            resources = loader.resources,
+            Sprite = PIXI.Sprite;
+        
+        let app = new Application({
+                width,
+                height
+            });
+
+        document.body.appendChild(app.view);
+
+        loader.add(`${imgBaseUrl}/images/cat.png`).load(setup);
+
+        function setup() {
+            let cat = new Sprite(resources[`${imgBaseUrl}/images/cat.png`].texture);
+            
+            app.stage.addChild(cat);
+        }
+    </script>
+</body>
+</html>

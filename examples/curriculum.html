@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>curriculum</title>
+</head>
+<body>
+    <script src="../pixi/pixi.min.js"></script>
+    <script>
+        var Application = PIXI.Application,
+            Container = PIXI.Container,
+            loader = PIXI.loader,
+            resources = PIXI.loader.resources,
+            TextureCache = PIXI.utils.TextureCache,
+            Sprite = PIXI.Sprite,
+            Graphics = PIXI.Graphics,
+            Rectangle = PIXI.Rectangle;
+
+        var app = new Application({
+            width: 1300,
+            height: 885,
+            backgroundColor: 0xffffff
+        });
+        document.body.appendChild(app.view);
+        
+        var g = new Graphics();
+        g.x = 0;
+        g.y = 0;
+        
+        app.stage.addChild(g);
+        g.lineStyle(2,0xf6ca00);
+        g.beginFill(0xf6ca00, 1);
+        g.moveTo(104, 356);
+        g.lineTo(104, 364);
+        g.quadraticCurveTo(104, 374, 114, 374);
+        g.lineTo(223, 374);
+        g.quadraticCurveTo(233, 374, 233, 364);
+        g.lineTo(233, 355);
+        g.quadraticCurveTo(252, 343, 233, 331);
+        g.lineTo(233, 314);
+        g.quadraticCurveTo(233, 304, 223, 304);
+        g.lineTo(114, 304);
+        g.quadraticCurveTo(104, 304, 104, 314);
+        g.lineTo(104, 330);
+        g.quadraticCurveTo(120, 343, 104, 356);
+        g.endFill();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "pixilearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binbinok/pixiLearn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binbinok/pixiLearn/issues"
+  },
+  "homepage": "https://github.com/binbinok/pixiLearn#readme",
+  "devDependencies": {
+    "koa": "^2.6.2",
+    "koa-static": "^5.0.0"
+  },
+  "dependencies": {
+    "http": "0.0.0",
+    "https": "^1.0.0"
+  }
+}
